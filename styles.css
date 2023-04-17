@@ -1,0 +1,286 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-font: 'Mulish', sans-serif;
+
+  /* Colors */
+  --white: #ffffff;
+  --light-gray: #f9f4fb;
+  --accent-color: #b52184;
+  --text-base-color: #312d64;
+  --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+}
+
+body {
+  background: var(--light-gray);
+  font-family: var(--base-font);
+}
+
+img {
+  width: 100%;
+}
+
+/* Typography */
+h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin: 1.7rem 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+}
+
+h3 {
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+}
+
+/* Form */
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: var(--base-font);
+}
+
+/* Hero Section */
+#hero {
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  width: 100%;
+}
+
+#hero .hero-cta p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+  margin-bottom: 3.5rem;
+}
+
+#hero .hero-cta .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+  border: 4px solid var(--accent-color);
+  border-radius: 76rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: filter 300ms;
+}
+
+#hero .hero-cta .button-down:hover {
+  filter: brightness(0.7);
+}
+
+#hero .hero-cta .button-down img {
+  width: 3rem;
+}
+
+/* Cards Section */
+#cards {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-background);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+}
+
+#cards .card {
+  background: var(--white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+#cards .card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+#cards .card .card-text {
+  width: 26.5rem;
+}
+
+/* Contact Section */
+#contact {
+  width: 100%;
+  height: 100%;
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contact form h2 {
+  margin-bottom: 4.3rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--text-base-color);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#contact form textarea {
+  height: 12.6rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+#contact form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+#contact form button {
+  background: var(--gradient-background);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+}
+
+#contact form button:hover {
+  filter: brightness(0.9);
+}
+
+#name {
+  background: url(./images/person.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url(./images/mail.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+/* Footer Section */
+footer {
+  background: var(--gradient-background);
+
+  padding: 3.2rem 1.6rem;
+}
+
+footer p {
+  color: var(--white);
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* @media */
+
+@media (min-width: 1440px) {
+  /* Global Styles */
+  h1 {
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+    margin: 0 0 0.8rem;
+  }
+
+  /* Hero Section */
+  #hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+
+  #hero .hero-cta {
+    order: 1; /* Flexbox item property: https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#ordena%C3%A7%C3%A3o_de_elementos_flex */
+    margin-top: 31.2rem;
+  }
+
+  #hero .astronaut {
+    order: 2;
+  }
+
+  #hero .hero-cta p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #hero .hero-cta .button-down {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  /* Cards Section */
+  #cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #cards .card img {
+    width: 9.7rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Contact Section */
+  #contact {
+    display: flex;
+    align-items: center;
+    gap: 9.2rem;
+    padding: 0;
+    height: 62.2rem;
+    margin: 0 auto;
+    background: url(./images/stars.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  #contact form {
+    flex: 1;
+    margin-left: 10.9rem;
+  }
+  #contact .stars {
+    flex: 1;
+  }
+}
